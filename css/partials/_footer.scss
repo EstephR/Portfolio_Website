@@ -1,0 +1,16 @@
+footer {
+    @include flex();
+    flex-direction: column;
+    width: 100%;
+    height: 20vh;
+    background: $third-color;
+    color: $second-color;
+    font-size: 1vw;
+    .legal {
+        @include flex();
+        a {
+            text-decoration: none;
+            color: $second-color;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+.home-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    .social-media-container {
+        height: 100%;
+        width: 10%;
+        background: $main-color;
+        @include flex();
+        flex-direction: column;
+        .social-media {
+            position: fixed;
+            bottom: 0;
+            height: 80%;
+            width: 100%;
+            @include flex();
+            flex-direction: column;
+            justify-content: space-around;
+            transition: all 0.4s ease;
+            .icon-container {
+                @include flex();
+                border: 3px solid $third-color;
+                border-radius: 10px;
+                width: 50px;
+                height: 50px;
+                transition: transform 0.7s ease-in-out;
+                text-decoration: none;
+                &:hover {
+                    background: $third-color;
+                    color: $main-color;
+                    transform: rotateY(360deg);
+                }
+                .icon {
+                    width: 80%;
+                    height: 80%;
+                }
+            }
+        }
+    }
+    .hero-container {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        background: $second-color;
+        .hero-text {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            font-size: 8.5vw;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: $main-color;
+            .hero-text-one {
+                position: absolute;
+                left: -2vw;
+                bottom: 18vw;
+            }
+            .hero-text-two {
+                position: absolute;
+                left: 31vw;
+                bottom: 6vw;
+            }
+            .hero-text-three {
+                position: absolute;
+                left: 3vw;
+                bottom: -6vw;
+            }
+            .hero-text-four {
+                position: absolute;
+                left: 47vw;
+                bottom: -6vw;
+            }
+        }
+    }
+}
+
+.icon-text {
+    @include flex();
+    flex-direction: column;
+    display: none;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.icon-container:hover .icon {
+    display: none;
+}
+
+.icon-container:hover .icon-text {
+    display: block;
+}

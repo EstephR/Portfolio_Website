@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/splide.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>e(steph)an - Web Development</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="menu-container">
+            <div class="logo" id="logo">
+                <div class="logo-text" id="logo-text">
+                    <h1 class="logo-text-outer" id="logo-text-front">e</h1>
+                    <h1 class="logo-text-outer">(</h1>
+                    <h1 class="logo-text-middle">steph</h1>
+                    <h1 class="logo-text-outer">)</h1>
+                    <h1 class="logo-text-outer" id="logo-text-back">an</h1>
+                </div>
+            </div>
+            <input type="checkbox" class="menu-toggler">
+            <div class="hamburger">
+                <div class="middle-line"></div>
+            </div>
+            <div class="menu">
+                <div class="overlay">
+                    <div class="menu-text">
+                        <ul>
+                            <li><a href="#" id="nav1">Home</a></li>
+                            <li><a href="#about" id="nav2">About</a></li>
+                            <li><a href="#projects" id="nav3">Projects</a></li>
+                            <li><a href="#contact" id="nav4">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="home-container">
+            <div class="social-media-container">
+                <div class="social-media" id="socialMedia">
+                    <a class="icon-container" href="https://github.com/EstephR">
+                        <img class="icon" src="img/git.png">
+                        <div class="icon-text">
+                            <div>Git</div>
+                            <div>Hub</div>
+                        </div>
+                    </a>
+                    <a class="icon-container" href="">
+                        <img class="icon" src="img/cv.png">
+                        <div class="icon-text">
+                            <div>My</div>
+                            <div>CV</div>
+                        </div>
+                    </a>
+                    <a class="icon-container" href="https://www.linkedin.com/in/stephan-reindl-b3a545192/">
+                        <img class="icon" src="img/linkedIn.png">
+                        <div class="icon-text">
+                            <div>Lin</div>
+                            <div>ked</div>
+                        </div>
+                    </a>
+                    <a class="icon-container" href="https://www.xing.com/profile/Stephan_Reindl4/cv">
+                        <img class="icon" src="img/xing.png">
+                        <div class="icon-text">
+                            <div>Xi</div>
+                            <div>ng</div>
+                        </div>
+                    </a>
+                    <a class="icon-container" href="#contact" id="contact-icon">
+                        <img class="icon" src="img/contact.png">
+                        <div class="icon-text">
+                            <div>Msg</div>
+                            <div>Me!</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Hero Section -->
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1 class="hero-text-one">Front</h1>
+                    <h1 class="hero-text-two">End</h1>
+                    <h1 class="hero-text-three">Web</h1>
+                    <h1 class="hero-text-four">Dev</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- About Section -->
+        <div class="about-container" id="about">
+            <div class="container">
+                <div class="spacer"></div>
+                <div class="headline-container">
+                    <div class="h2-container">
+                        <h2>About</h2>
+                    </div>
+                </div>
+                <div class="about-text-container">
+                    <div class="about-text">
+                        <div class="img-container">
+                            <img src="img/portrait.jpg">
+                        </div>
+                        <div class="text-container">
+                            <p>Hi, I'm <span class="name">Stephan Reindl</span> based in Vienna/Austria.</p>
+                            <br>
+                            <p>Currently I'm learning Full Stack Web Dev. I'm passionate about design and I love to try different approaches.</p>
+                            <br>
+                            <p>Due to my professional experience as a project manager in the industry I can offer a various set of competencies.</p>
+                            <br>
+                            <p>You can check some of my projects below!</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div class="projects-container" id="projects">
+            <div class="container">
+                <div class="spacer"></div>
+                <div class="headline-container">
+                    <div class="h2-container">
+                        <h2>Projects</h2>
+                    </div>
+                </div>
+                <div class="splide">
+                    <div class="splide__track">
+                        <ul class="splide__list" id="cardArea">
+                            <li class="splide__slide">
+                                <img class="slide-img" src="img/pizzeria.png">
+                                <h1 class="slide-headline">Pizza Delivery Service</h1>
+                                <p class="slide-p-tech">Angular-HTML-SCSS-TypeScript</p>
+                                <p class="slide-description">This was a funny task to do. First Angular project with a little Shopping Cart!</p>
+                                <button class="slide-button">
+                                <p class="button-text">Learn more</p>
+                                <img class="btn-img" src="img/arrow_right.png">
+                                </button>
+                            </li>
+                            <li class="splide__slide">
+                                <img class="slide-img" src="img/animal.png">
+                                <h1 class="slide-headline">Pet Shop</h1>
+                                <p class="slide-p-tech">HTML-SCSS-TypeScript</p>
+                                <p class="slide-description">Experimenting with TypeScript, classes, objects and funny images! Cards will be created dynamically!</p>
+                                <button class="slide-button">
+                                <p class="button-text">Learn more</p>
+                                <img class="btn-img" src="img/arrow_right.png">
+                                </button>
+                            </li>
+                            <li class="splide__slide">
+                                <img class="slide-img" src="img/planer.png">
+                                <h1 class="slide-headline">Weekly Planner App</h1>
+                                <p class="slide-p-tech">HTML-SCSS-JavaScript-JSON</p>
+                                <p class="slide-description">A weekly planner app which allows to set priorities and sort by importance. Cards are created dynamically!</p>
+                                <button class="slide-button">
+                                <p class="button-text">Learn more</p>
+                                <img class="btn-img" src="img/arrow_right.png">
+                                </button>
+                            </li>
+                            <li class="splide__slide">
+                                <img class="slide-img" src="img/music.png">
+                                <h1 class="slide-headline">Lake on Fire Fesival</h1>
+                                <p class="slide-p-tech">HTML-SCSS-JavaScript</p>
+                                <p class="slide-description">Mostly design oriented project for my very own music festival. Just a little bit of JS for price entrance calculation!</p>
+                                <button class="slide-button">
+                                <p class="button-text">Learn more</p>
+                                <img class="btn-img" src="img/arrow_right.png">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-container" id="contact">
+            <div class="container">
+                <div class="spacer"></div>
+                <div class="headline-container">
+                    <div class="h2-container">
+                        <h2>Contact</h2>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <div class="form-container">
+                        <!-- Contact Form -->
+                        <form class="contact-form">
+                            <input type="text" placeholder="Your Name">
+                            <input type="email" placeholder="Your E-Mail">
+                            <input type="text" placeholder="Subject">
+                            <textarea type="text" placeholder="Your Message" rows="4"></textarea>
+                            <input type="submit" class="contact-btn" value="send">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Website and Design &copy; Stephan Reindl 2022, all rights reserved</p>
+        <!-- <div class="legal">
+            <a href="#">
+                <p>site notice</p>
+            </a>
+            <a href="#">
+                <p>data protection</p>
+            </a>
+        </div> -->
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js"></script>
+    <script src="ts/script.js"></script>
+</body>
+
+</html>

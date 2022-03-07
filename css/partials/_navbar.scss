@@ -1,0 +1,199 @@
+.menu-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    z-index: 1;
+}
+
+.menu-toggler {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    /* hide checkbox */
+    opacity: 0;
+}
+
+.hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    padding: 1rem;
+    background: none;
+    @include flex();
+}
+
+
+/* Hamburger Lines */
+
+
+/* Middle Line */
+
+.hamburger>.middle-line {
+    position: relative;
+    @include flex();
+    width: 100%;
+    height: 5px;
+    background: $main-color;
+    transition: all 0.4s ease;
+}
+
+
+/* top and bottom lines */
+
+.hamburger>.middle-line:before,
+.hamburger>.middle-line:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    width: 100%;
+    height: 5px;
+    background: inherit;
+}
+
+
+/* moves bottom line down */
+
+.hamburger>.middle-line:after {
+    top: 15px;
+}
+
+
+/* toggler animation */
+
+.menu-container .menu-toggler:checked+.hamburger>.middle-line {
+    transform: rotate(135deg);
+}
+
+
+/* turn lines into X */
+
+.menu-container .menu-toggler:checked+.hamburger>.middle-line:before,
+.menu-container .menu-toggler:checked+.hamburger>.middle-line:after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+
+/* Rotate on Hover when checked */
+
+.menu-toggler:checked:hover+.hamburger>.middle-line {
+    transform: rotate(225deg);
+}
+
+
+/* menu */
+
+.menu {
+    position: fixed;
+    @include flex();
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.menu>.overlay {
+    background: #242c3396;
+    /* round effect */
+    /* border-radius: 50%; */
+    /* it appears that it goes outside */
+    width: 200vw;
+    height: 200vw;
+    @include flex();
+    /* without flex: none the circle appears ovo */
+    flex: none;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu>.overlay>.menu-text {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0, 4s ease;
+}
+
+.menu>.overlay>.menu-text>ul>li {
+    list-style: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 7vw;
+    padding: 1rem;
+}
+
+.menu>.overlay>.menu-text>ul>li>a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+}
+
+li>#nav1:hover {
+    color: $main-color;
+    background: $second-color;
+    padding: 10px;
+}
+
+li>#nav2:hover,
+li>#nav4:hover {
+    color: $second-color;
+    background: $third-color;
+    padding: 10px;
+}
+
+li>#nav3:hover {
+    color: $main-color;
+    background: $third-color;
+    padding: 10px;
+}
+
+
+/* Show Menu */
+
+.menu-toggler:checked~.menu {
+    visibility: visible;
+}
+
+.menu-toggler:checked~.menu>.overlay {
+    transform: scale(1);
+    transition-duration: 0.75s;
+}
+
+.menu-toggler:checked~.menu>.overlay>.menu-text {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4;
+}
+
+// Logo
+.logo {
+    @include flex();
+    background: $third-color;
+    width: 20%;
+    height: 100%;
+    min-height: 70px;
+    transition: all 0.4s ease;
+    .logo-text {
+        @include flex();
+        font-size: 1.5vw;
+        text-align: center;
+        .logo-text-outer {
+            color: $main-color;
+        }
+        .logo-text-middle {
+            color: $second-color;
+        }
+    }
+}

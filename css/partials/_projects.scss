@@ -1,0 +1,96 @@
+    .projects-container {
+        width: 100%;
+        height: 100vh;
+        background: $second-color;
+        .spacer {
+            width: 100%;
+            height: 15%;
+        }
+        .headline-container {
+            @include flex();
+            justify-content: left;
+            .h2-container {
+                width: 47vw;
+                h2 {
+                    color: $main-color;
+                    left: -2.4vw;
+                }
+            }
+        }
+    }
+    
+    .splide {
+        width: 100%;
+        height: 44%;
+        .splide__track {
+            height: 100%;
+            width: 100%;
+            margin: 0 auto;
+            .splide__list {
+                .splide__slide {
+                    border: 3px solid $third-color;
+                    height: 100%;
+                    padding: 2vw;
+                    .slide-img {
+                        width: 4vw;
+                        height: 4vw;
+                        margin-bottom: 0.5vw;
+                    }
+                    .slide-headline {
+                        font-size: 1.5vw;
+                    }
+                    .slide-p-tech {
+                        font-size: 1.2vw;
+                        margin-bottom: 1vw;
+                    }
+                    .slide-description {
+                        font-size: 1.2vw;
+                        margin-bottom: 1vw;
+                    }
+                    .slide-button {
+                        @include flex();
+                        justify-content: space-between;
+                        width: 100%;
+                        height: 40px;
+                        background-color: transparent;
+                        border-style: none;
+                        cursor: pointer;
+                        transition: all 0.4s ease-in-out;
+                        &:hover {
+                            background: $third-color;
+                        }
+                        .btn-img {
+                            width: 40px;
+                            height: 100%;
+                            background: $third-color;
+                        }
+                        .button-text {
+                            font-weight: bold;
+                            font-size: 1.2em;
+                            color: $third-color;
+                        }
+                    }
+                    .slide-button:hover .button-text {
+                        color: $main-color;
+                        margin-left: 1.5vw;
+                    }
+                }
+            }
+        }
+    }
+    
+    .splide__arrow {
+        background: $main-color;
+        border-radius: 0;
+        opacity: 1;
+        width: 4em;
+        height: 4em;
+    }
+    
+    .splide__arrow--prev {
+        left: -7vw;
+    }
+    
+    .splide__arrow--next {
+        right: -7vw;
+    }
